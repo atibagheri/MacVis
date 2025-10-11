@@ -1,0 +1,278 @@
+/* ---------- Base / App ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+}
+
+.App { text-align: center; }
+
+.success { background-color: skyblue; }
+.warnning { background-color: red; } /* keeping your original class name */
+
+.App-logo { height: 40vmin; pointer-events: none; }
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo { animation: App-logo-spin infinite 20s linear; }
+}
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link { color: #b6d8e1; }
+
+/* ---------- Header / Navbar (ONE LINE) ---------- */
+.header {
+  position: sticky;
+  top: 0;
+  width: 100%;                /* not 100vw */
+  background-color: #adcacb;
+  padding: 0.8rem 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0c0c0b;
+  text-decoration: none;
+  margin-right: 2rem;
+  flex: 0 0 auto;             /* don't shrink */
+  white-space: nowrap;        /* never wrap */
+}
+
+/* ONE-LINE nav, scrolls horizontally if needed — hard overrides */
+.navbar {
+  display: flex !important;
+  align-items: center !important;
+  flex: 1 1 auto !important;      /* take remaining space */
+  min-width: 0 !important;        /* allow overflow-x to work in flex */
+  gap: 12px;
+  flex-wrap: nowrap !important;   /* 🔒 NO wrapping */
+  white-space: nowrap !important; /* keep each link on one line */
+  overflow-x: auto !important;    /* enable sideways scroll */
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.navbar::-webkit-scrollbar { height: 6px; }
+.navbar::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+
+.navbar a {
+  flex: 0 0 auto !important;      /* links do not shrink */
+  white-space: nowrap !important; /* never wrap individual links */
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  color: black;
+  font-weight: 500;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+.navbar a:hover { background-color: #cce4ff; }
+.navbar a.active {
+  background-color: #a89f91;
+  color: white;
+  border: 2px solid #d9e7f0;
+}
+/* ensure the divider is visible in the flex row */
+.navbar > .nav-divider{
+  flex: 0 0 2px;     /* fixed width; don’t collapse */
+  width: 2px;
+  height: 1.3em;     /* roughly text height */
+  align-self: center;
+  background: #000;
+  border-radius: 1px;
+  margin: 0 14px;
+}
+
+.main-content { padding: 2rem; width: 100%; }
+
+/* tighter brand + links spacing */
+.header { gap: 8px !important; }          /* was 16px */
+.logo { margin-right: 0.5rem !important; }/* was 2rem */
+
+/* (optional) slightly tighter spacing between links too */
+.navbar { gap: 10px !important; }         /* was 12px */
+.navbar a { padding: 0.4rem 0.75rem; }    /* was 0.5rem 1rem */
+
+/* ---------- PCA ---------- */
+.pca-container {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: auto;
+  padding: 2rem;
+  background: #e4eef1;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.upload-section { margin-top: 20px; display: flex; flex-direction: column; gap: 12px; }
+
+button {
+  width: 120px;
+  padding: 8px;
+  background: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+button:hover { background: #0056b3; }
+
+.plot-container { margin-top: 30px; text-align: center; }
+img { width: 100%; max-width: 800px; border: 1px solid #ccc; border-radius: 6px; }
+
+.pca-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.left-panel {
+  background-color: #e0f4ff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  flex: 1 1 480px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+.right-panel {
+  background-color: #e6ecf0;
+  padding: 1rem;
+  border-radius: 10px;
+  flex: 1 1 500px;
+  min-height: 350px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ---------- Heatmap ---------- */
+.heatmap-container { display: flex; flex-direction: row; gap: 40px; padding: 20px; }
+.instruction-box {
+  width: 40%;
+  padding: 20px;
+  background-color: #f9f5fa;
+  border: 1px solid #e5eff1;
+  border-radius: 8px;
+}
+.heatmap-output { width: 60%; padding: 20px; }
+.example-table { width: 70%; border-collapse: collapse; margin-bottom: 10px; }
+.example-table th, .example-table td {
+  border: 1px solid #fffcfc;
+  padding: 6px 10px;
+  font-size: 0.85rem;
+  text-align: left;
+}
+
+/* ---------- Venn Diagram ---------- */
+.venn-wrapper { display: flex; min-height: 600px; }
+.venn-sidebar {
+  width: 220px;
+  background-color: #e6f0ff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-right: 2px solid #b3d4fc;
+}
+.venn-tab-vertical {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: #003366;
+  cursor: pointer;
+  border-left: 4px solid transparent;
+  transition: all 0.2s;
+}
+.venn-tab-vertical:hover { background-color: #dceeff; }
+.venn-tab-vertical.active {
+  background-color: #cce6ff;
+  font-weight: bold;
+  border-left: 4px solid #0077cc;
+}
+.venn-main { flex-grow: 1; padding: 2rem; background-color: #f9fbff; }
+.venn-image-container img {
+  margin-top: 1rem;
+  max-width: 100%;
+  height: auto;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+.venn-sidebar button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-weight: bold;
+  background-color: #e0e0e0;
+  border: none;
+  cursor: pointer;
+}
+.venn-sidebar button.active { background-color: #c0ddf0; color: black; }
+
+/* ---- Home-only Smart Panel banner ---- */
+.smartpanel-banner{
+  position: sticky;
+  top: 0;
+  z-index: 1020;
+  background: #fff;
+  text-align: center;
+  color: #000;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 1.2;
+  padding: 12px 0 14px;
+}
+.smartpanel-banner::after{
+  content: "";
+  display: block;
+  height: 8px;                         /* rounded black bar */
+  width: clamp(240px, 60%, 980px);
+  margin: 8px auto 0;
+  background: #000;
+  border-radius: 999px;
+}
+
+/* ---- Green navbar ---- */
+.header--green{
+  position: sticky;
+  top: 0;                               /* default when no banner */
+  z-index: 1010;
+  background: #97bdb3;
+  padding: 10px 16px;
+}
+.header--offset{                        /* used only on Home */
+  top: 58px;                            /* ≈ banner height */
+}
+
+.logo{ font-weight: 800; color: #0b1c1a; text-decoration: none; margin-right: 16px; }
+
+.navbar{ display: inline-flex; gap: 22px; align-items: center; }
+.navbar a{ color: #0b1c1a; text-decoration: none; font-weight: 600; }
+.navbar a.active{ border-bottom: 3px solid #0b1c1a; padding-bottom: 4px; }
+
+
+
+/* content */
+.main-content{ padding: 24px; }
+

@@ -1,0 +1,65 @@
+{
+  "name": "degviz",
+  "homepage": "https://atibagheri.github.io/MacVis",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@mjackson/multipart-parser": "^0.10.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/jest-dom": "^6.6.3",
+    "@testing-library/react": "^16.3.0",
+    "@testing-library/user-event": "^13.5.0",
+    "@upsetjs/bundle": "^1.11.0",
+    "@upsetjs/react": "^1.11.0",
+    "axios": "^1.10.0",
+    "bootstrap": "^5.3.7",
+    "d3": "^7.9.0",
+    "file-saver": "^2.0.5",
+    "jspdf": "^3.0.3",
+    "ml-matrix": "^6.12.1",
+    "ml-pca": "^4.1.1",
+    "papaparse": "^5.5.3",
+    "plotly.js": "^3.0.1",
+    "plotly.js-dist-min": "^3.0.1",
+    "react": "^19.1.0",
+    "react-bootstrap": "^2.10.10",
+    "react-dom": "^19.1.0",
+    "react-icons": "^5.5.0",
+    "react-plotly.js": "^2.6.0",
+    "react-router-dom": "^7.6.3",
+    "svg2pdf.js": "^2.6.0",
+    "venn.js": "^0.2.10",
+    "web-vitals": "^2.1.4",
+    "zscore": "^0.1.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0",
+    "react-scripts": "^5.0.1"
+  }
+}

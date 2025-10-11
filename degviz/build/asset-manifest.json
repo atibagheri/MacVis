@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/AppDEG/static/css/main.062dd58d.css",
+    "main.js": "/AppDEG/static/js/main.44e6a0a9.js",
+    "static/media/enrichment.png": "/AppDEG/static/media/enrichment.70c529d62bda2ef7248d.png",
+    "static/media/venn.png": "/AppDEG/static/media/venn.c0e57aeafeb910ee7930.png",
+    "static/media/go.png": "/AppDEG/static/media/go.2e2464b7d84eb9961ec1.png",
+    "static/media/kegg.png": "/AppDEG/static/media/kegg.a7be7bd5b687c4372c2b.png",
+    "static/media/heatmap.png": "/AppDEG/static/media/heatmap.93a97ab3170c619274ee.png",
+    "static/media/pca_plot.png": "/AppDEG/static/media/pca_plot.c109e0ca2b05cc8abebf.png",
+    "index.html": "/AppDEG/index.html",
+    "main.062dd58d.css.map": "/AppDEG/static/css/main.062dd58d.css.map",
+    "main.44e6a0a9.js.map": "/AppDEG/static/js/main.44e6a0a9.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.062dd58d.css",
+    "static/js/main.44e6a0a9.js"
+  ]
+}

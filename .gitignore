@@ -1,68 +1,27 @@
-# ================== Frontend (React) ==================
-# dependencies
+# Frontend (React)
 /node_modules
-/.pnp
-.pnp.js
-
-# production builds
 /build
 /dist
 
-# environment files
-.env
-.env.local
-.env.development.local
-.env.test.local
-.env.production.local
-
-# testing
-/coverage
-
-# OS & editor
-.DS_Store
-Thumbs.db
-.vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
-
-# keep curated UI assets
-!.env
-!degviz/src/assets/**
-
-# ================== Backend (Python) ==================
+# Python
 __pycache__/
 *.py[cod]
-*.pyo
-*.egg-info/
-.eggs/
 .venv/
 venv/
 .env
 .env.*
 
-# caches and logs
-pip-wheel-metadata/
-.pytest_cache/
-.mypy_cache/
-*.log
-
-# ================== Backend (R / Plumber) ==================
+# R
 .Rhistory
-.Rapp.history
 .Rproj.user/
-.RData
-.Ruserdata
-
-# local R library cache
 backend/degviz_api/r_libs/
 
-# ================== App outputs / data ==================
-# generated results
+# Outputs / temp
 backend/results/
 **/tmp/
 **/temp/
 
-# big images or generated figures (keep curated UI assets only)
+# Large generated figures (keep only curated UI assets)
 *.pdf
 *.tif
 *.tiff
@@ -70,6 +29,9 @@ backend/results/
 *.png
 !degviz/src/assets/**
 
-# placeholders to keep dirs
-!backend/results/.gitkeep
-!backend/degviz_api/data/.gitkeep
+# Ignore your demo video
+degviz/src/assets/demoReel.mp4
+
+# OS / Editor
+.DS_Store
+.vscode/
