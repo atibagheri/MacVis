@@ -1,30 +1,35 @@
-# ---------- Frontend (React) ----------
-degviz/src/assets/demoReel.mp4
-
+# ================== Frontend (React) ==================
 # dependencies
 /node_modules
 /.pnp
 .pnp.js
 
-# testing
-/coverage
-
-# production
+# production builds
 /build
 /dist
 
-# env files
+# environment files
+.env
 .env.local
 .env.development.local
 .env.test.local
 .env.production.local
 
-# logs
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
+# testing
+/coverage
 
-# ---------- Backend (Python) ----------
+# OS & editor
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# keep curated UI assets
+!.env
+!degviz/src/assets/**
+
+# ================== Backend (Python) ==================
 __pycache__/
 *.py[cod]
 *.pyo
@@ -35,12 +40,13 @@ venv/
 .env
 .env.*
 
-# tool caches
+# caches and logs
 pip-wheel-metadata/
 .pytest_cache/
 .mypy_cache/
+*.log
 
-# ---------- R / Plumber ----------
+# ================== Backend (R / Plumber) ==================
 .Rhistory
 .Rapp.history
 .Rproj.user/
@@ -50,7 +56,7 @@ pip-wheel-metadata/
 # local R library cache
 backend/degviz_api/r_libs/
 
-# ---------- App outputs & data ----------
+# ================== App outputs / data ==================
 # generated results
 backend/results/
 **/tmp/
@@ -64,16 +70,6 @@ backend/results/
 *.png
 !degviz/src/assets/**
 
-# allow placeholders so these dirs exist
+# placeholders to keep dirs
 !backend/results/.gitkeep
 !backend/degviz_api/data/.gitkeep
-
-# ---------- Editor/OS ----------
-.DS_Store
-Thumbs.db
-.vscode/*
-!.vscode/settings.json
-!.vscode/extensions.json
-
-# ---------- Docker ----------
-*.log
