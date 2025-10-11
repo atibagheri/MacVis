@@ -1,10 +1,15 @@
 # Frontend (React)
 # Ignore large demo video and build files
-degviz/src/assets/demoReel.mp4
+# Node modules and caches
 degviz/node_modules/
 degviz/.cache/
-degviz/build/
 
+# Build outputs
+degviz/build/
+degviz/dist/
+
+# Big assets that shouldn't be in repo
+degviz/src/assets/demoReel.mp4
 
 /node_modules
 /build
