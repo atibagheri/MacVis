@@ -1,4 +1,11 @@
 # Frontend (React)
+# Ignore large demo video and build files
+degviz/src/assets/demoReel.mp4
+degviz/node_modules/
+degviz/.cache/
+degviz/build/
+
+
 /node_modules
 /build
 /dist
@@ -35,3 +42,6 @@ degviz/src/assets/demoReel.mp4
 # OS / Editor
 .DS_Store
 .vscode/
+/node_modules
+/build
+/.cache
