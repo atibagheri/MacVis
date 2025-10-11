@@ -1,0 +1,79 @@
+# ---------- Frontend (React) ----------
+degviz/src/assets/demoReel.mp4
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.js
+
+# testing
+/coverage
+
+# production
+/build
+/dist
+
+# env files
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# ---------- Backend (Python) ----------
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.env
+.env.*
+
+# tool caches
+pip-wheel-metadata/
+.pytest_cache/
+.mypy_cache/
+
+# ---------- R / Plumber ----------
+.Rhistory
+.Rapp.history
+.Rproj.user/
+.RData
+.Ruserdata
+
+# local R library cache
+backend/degviz_api/r_libs/
+
+# ---------- App outputs & data ----------
+# generated results
+backend/results/
+**/tmp/
+**/temp/
+
+# big images or generated figures (keep curated UI assets only)
+*.pdf
+*.tif
+*.tiff
+*.svg
+*.png
+!degviz/src/assets/**
+
+# allow placeholders so these dirs exist
+!backend/results/.gitkeep
+!backend/degviz_api/data/.gitkeep
+
+# ---------- Editor/OS ----------
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+
+# ---------- Docker ----------
+*.log

@@ -1,0 +1,23 @@
+{
+<<<<<<< HEAD
+  "dependencies": {
+    "@upsetjs/react": "^1.11.0",
+    "papaparse": "^5.5.3"
+  },
+  "scripts": {
+  "start": "react-scripts start",
+  "build": "react-scripts build",
+  "test": "react-scripts test"
+}
+=======
+    "dependencies": {
+        "@upsetjs/react": "^1.11.0",
+        "papaparse": "^5.5.3"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "build": "react-scripts build",
+        "test": "react-scripts test"
+    }
+>>>>>>> b4032e14 (Initial commit: frontend + backend with R API)
+}

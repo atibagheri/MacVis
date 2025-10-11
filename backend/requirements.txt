@@ -1,0 +1,11 @@
+Flask
+flask-cors
+pandas
+scikit-learn
+matplotlib
+seaborn
+numpy
+biopython
+wordcloud
+pillow
+lxml
