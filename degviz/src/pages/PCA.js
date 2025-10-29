@@ -11,19 +11,35 @@ function PCA() {
   const handleRunPCA = async () => {
     if (!exprFile || !sampleFile) return;
     setLoading(true);
-    const formData = new FormData();
-    formData.append('expression_file', exprFile);
-    formData.append('sample_file', sampleFile);
     try {
-      const res = await axios.post('http://localhost:5050/api/pca/', formData);
+      const fd = new FormData();
+  
+      // Send both alias pairs so either backend variant works
+      fd.append('expr_file', exprFile);
+      fd.append('expression_file', exprFile);
+      fd.append('meta_file', sampleFile);
+      fd.append('sample_file', sampleFile);
+  
+      // Common flags (as strings)
+      fd.append('cpm', 'true');
+      fd.append('log2', 'true');
+      // If you use aesthetics, include them only if present:
+      // fd.append('color', 'Condition');
+      // fd.append('shape', 'Day');
+      // fd.append('size', '');
+  
+      const res = await axios.post('/api/pca/', fd);  // keep trailing slash
       setPlotImg(`data:image/png;base64,${res.data.png}`);
       setPdfLink(`data:application/pdf;base64,${res.data.pdf}`);
     } catch (error) {
-      console.error('PCA error:', error);
+      // See the actual server message:
+      console.error('PCA error:', error?.response?.status, error?.response?.data || error.message);
     } finally {
       setLoading(false);
     }
   };
+  
+  
 
   return (
     <div style={{

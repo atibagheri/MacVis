@@ -30,7 +30,7 @@ export default function Contact() {
           <h2 className="text-xl font-semibold mb-2">Links</h2>
           <ul className="list-disc pl-6 space-y-1">
             <li>
-              <a href="https://github.com/atibagheri" target="_blank" className="text-blue-600 underline">
+              <a href="https://github.com/atibagheri/MacVis" target="_blank" className="text-blue-600 underline">
                 GitHub Repository
               </a>
             </li>

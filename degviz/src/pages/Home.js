@@ -1,8 +1,3 @@
-import React, { useState, useRef } from "react";
-import Plot from "react-plotly.js";
-import Plotly from "plotly.js-dist-min";
-import * as d3 from "d3";
-import jsPDF from "jspdf";
 import { useNavigate } from "react-router-dom";
 
 // ✅ Import your images from src/assets

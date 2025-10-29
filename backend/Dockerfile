@@ -14,6 +14,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       libxml2-dev libxslt1-dev \
       zlib1g-dev libjpeg-dev libpng-dev libfreetype6-dev \
       curl \
+      chromium \
+      fonts-liberation \
+      libnss3 \
+      libxss1 \
+      libasound2 \
+      libatk-bridge2.0-0 \
+      libgtk-3-0 \
     && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app

@@ -3,7 +3,7 @@ import React, { useEffect, useMemo, useRef, useState } from "react";
 /* ===============================
    Config
    =============================== */
-const API_BASE = "http://localhost:5050/api/transpca";
+const API_BASE = "/api/transpca";
 const DEFAULT_LABEL_COL = ".JOIN_SAMPLE"; // or "SampleName"
 
 /* ===============================

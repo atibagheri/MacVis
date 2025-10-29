@@ -103,7 +103,7 @@ export default function GOMapApp() {
       setResult(null);
       setMsg("");
 
-      const res = await axios.post("http://localhost:5050/api/gomap", formData);
+      const res = await axios.post("/api/gomap", formData);
       if (res?.data) {
         setResult(res.data);
         console.log("GOMap result keys:", Object.keys(res.data));

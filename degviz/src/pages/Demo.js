@@ -1,7 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import demoReel from "../assets/demoReel.mp4";
-
 import Immune from '../assets/transpca.png';
 import pca from '../assets/pcaplot.png';
 import vennUpset from '../assets/vennUpset.png';
@@ -59,30 +57,7 @@ export default function Demo() {
         <div className="demo-root">
             <style>{CSS}</style>
 
-            <header className="demo-intro">
-                <h1 className="demo-h1">MacViz Demo</h1>
-                <p className="demo-sub">See MacViz in action</p>
-            </header>
-
-            {/* Top movie/hero */}
-            <section className="demo-hero">
-                <video
-                    className="demo-video"
-                    src={demoReel}
-                    controls
-                    playsInline
-                    preload="metadata"
-                />
-                <p className="demo-caption">Watch a fast tour of MacViz. We upload sample gene lists, run PCA, generate Venn/UpSet, explore GO/KEGG, and finish with a Circos overlap.
-                    All datasets shown are examples—grab the sample files below and follow along. For deeper guidance, see the docs.</p>
-
-
-            </section>
-
-            <header className="demo-intro">
-                {/* <h1 className="demo-h1">MacViz Demo</h1> */}
-                <p className="demo-sub">Quick tour of each module. </p>
-            </header>
+            
 
             {/* Immuno Decomposer (TransPCA) — NEW FIRST CARD */}
             <section>
@@ -319,12 +294,12 @@ export default function Demo() {
                     <div className="demo-right">
                         <h2 className="demo-title">Circos Plot Overlap</h2>
                         <p className="demo-p">
-                        This plot is used to visualize the overlap between multiple gene lists. Each arc on the circle represents one gene list,
-                         and the ribbons connecting arcs indicate shared genes between the lists. The wider the ribbon, the larger the overlap. 
-                        This makes it easy to see commonalities across datasets and identify strongly intersecting groups.
+                            This plot is used to visualize the overlap between multiple gene lists. Each arc on the circle represents one gene list,
+                            and the ribbons connecting arcs indicate shared genes between the lists. The wider the ribbon, the larger the overlap.
+                            This makes it easy to see commonalities across datasets and identify strongly intersecting groups.
                         </p>
 
-                        
+
 
                         <div style={{ marginTop: 10 }}>
                             <Link to="/circos" className="demo-btn">
@@ -348,11 +323,18 @@ export default function Demo() {
                     </div>
                 </div>
             </section>
-
-
-
-
-
+            {/* Top movie/hero */}
+            <section style={{ textAlign: 'center',  marginTop: '64px',marginBottom: '32px' }}>
+                <h2 style={{ marginBottom: '8px', color: 'var(--demo-text)' }}>Watch the MacViz Demo</h2>
+                <a
+                    href="https://usegalaxy.org/api/datasets/f9cad7b01a47213527de0e2789e7e89c/display?to_ext=mov"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="demo-btn"
+                >
+                    🎥 Watch Demo Video
+                </a>
+            </section>
 
         </div>
     );

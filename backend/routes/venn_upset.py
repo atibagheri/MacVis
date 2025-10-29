@@ -6,7 +6,9 @@ import tempfile
 
 # ✅ Blueprint name must match what you import in app.py
 venn_upset_blueprint = Blueprint("venn_upset", __name__)
-PLUMBER_URL = "http://localhost:8000/venn-upset"
+PLUMBER_URL = os.getenv("VENNUPSET_PLUMBER_URL", "http://rapi:8000/venn-upset")
+
+
 
 @venn_upset_blueprint.route("", methods=["POST"])
 def venn_upset():

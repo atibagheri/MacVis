@@ -2,49 +2,64 @@ version: "3.9"
 
 services:
   rapi:
-    image: atefehb22/mcvis-rapi:latest     
+    image: atefehb22/rapi:latest
+    environment:
+      TMPDIR: "/tmp"
+      TMP: "/tmp"
+      TEMP: "/tmp"
+    command: >
+      sh -lc 'mkdir -p /tmp && chmod 1777 /tmp &&
+              exec Rscript run_api.R'
     ports:
       - "8000:8000"
     healthcheck:
-      test: ["CMD-SHELL","curl -fsS http://127.0.0.1:8000/healthz || curl -fsS http://localhost:8000/__docs__/ || exit 0"]
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:8000/healthz || curl -fsS http://127.0.0.1:8000/__docs__/ || exit 1"]
       interval: 15s
       timeout: 10s
       retries: 10
       start_period: 120s
     volumes:
-      - shared:/shared           
+      - tmpdir:/tmp
 
   backend:
-    build:
-      context: ./backend
-      dockerfile: Dockerfile
-    image: atefehb22/mcvis-backend:latest 
+    image: atefehb22/backend:latest
+    working_dir: /app
     environment:
-      R_SERVICE_URL: "http://rapi:8000"   
-      R_API_BASE:    "http://rapi:8000"   
-      FLASK_ENV:     "production"
+      TMPDIR: "/tmp"
+      TMP: "/tmp"
+      TEMP: "/tmp"
+      ENTREZ_EMAIL: "bagheri.atefeh22@gmail.com"
+      R_SERVICE_URL: "http://rapi:8000"
+      R_API_BASE: "http://rapi:8000"
+      GOMAP_PLUMBER_URL: "http://rapi:8000/gomap"
+      KEGGMAP_PLUMBER_URL: "http://rapi:8000/keggmap"
+      CIRCOS_PLUMBER_URL: "http://rapi:8000/circos"
+      VENNUPSET_PLUMBER_URL: "http://rapi:8000/venn-upset"
+      FLASK_ENV: "production"
     depends_on:
-      - rapi 
+      rapi:
         condition: service_healthy
+    command: >
+      sh -lc 'mkdir -p /tmp && chmod 1777 /tmp &&
+              exec /opt/venv/bin/gunicorn -b 0.0.0.0:5050 --workers=3 --timeout=300 app:app'
     ports:
       - "5050:5050"
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS http://127.0.0.1:5050/healthz || curl -fsS http://127.0.0.1:5050/api/healthz || exit 1"]
+      interval: 15s
+      timeout: 5s
+      retries: 10
+      start_period: 30s
     volumes:
-      - shared:/shared            
-      - ./backend/uploads:/app/uploads
-      - ./backend/results:/app/results
+      - tmpdir:/tmp
 
   web:
-    build:
-      context: ./degviz
-      dockerfile: Dockerfile
-      args:
-        REACT_APP_API_BASE: "/api"
-        PUBLIC_URL: "/AppDEG"
-    image: atefehb22/mcvis-web:latest      
+    image: atefehb22/frontend:latest
     depends_on:
-      - backend
+      backend:
+        condition: service_healthy
     ports:
       - "3000:80"
 
 volumes:
-  shared:                           
+  tmpdir:

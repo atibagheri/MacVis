@@ -1,5 +1,31 @@
+# keep node_modules out of the context
 node_modules
+npm-debug.log*
+*.log
+
+# VCS & editor junk
 .git
-__pycache__
+.gitignore
+.DS_Store
+.vscode/
+.idea/
+
+# Python/R leftovers (safe to ignore)
+__pycache__/
 *.Rproj.user
 *.Rhistory
+
+# env files
+.env
+.env.*.local
+
+# package managers you’re NOT using
+yarn.lock
+
+# test/coverage
+dist
+coverage
+
+# IMPORTANT: do NOT ignore public/ — we need public/demo/*
+# Add this to avoid copying stale build from host:
+build

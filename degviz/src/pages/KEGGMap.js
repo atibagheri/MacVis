@@ -87,7 +87,7 @@ export default function KEGGApp() {
       setSelectedMap("");
       setMsg("");
 
-      const res = await axios.post("http://localhost:5050/api/keggmap", formData, {
+      const res = await axios.post("/api/keggmap", formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

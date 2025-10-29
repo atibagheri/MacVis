@@ -1,6 +1,6 @@
 import React, { useMemo, useRef, useState } from "react";
 
-const BACKEND_ORIGIN = process.env.REACT_APP_BACKEND_ORIGIN || "http://localhost:5050";
+const BACKEND_ORIGIN = process.env.REACT_APP_BACKEND_ORIGIN || process.env.REACT_APP_API_BASE || "/api";
 const API_URL = `${BACKEND_ORIGIN}/api/venn-upset`;
 
 export default function VennDiagram() {

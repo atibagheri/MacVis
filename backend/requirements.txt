@@ -9,3 +9,7 @@ biopython
 wordcloud
 pillow
 lxml
+gunicorn
+requests
+plotly
+kaleido
