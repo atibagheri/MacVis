@@ -21,8 +21,10 @@ export default function CircosPlot() {
   const debounceTimer = useRef(null);
   const lastBlobUrlsRef = useRef({ png: null, pdf: null });
 
-  const BACKEND_ORIGIN = process.env.REACT_APP_BACKEND_ORIGIN || process.env.REACT_APP_API_BASE || "/api";
+
+  const BACKEND_ORIGIN = process.env.REACT_APP_BACKEND_ORIGIN || process.env.REACT_APP_API_BASE || "";
   const API_URL = `${BACKEND_ORIGIN}/api/circos`;
+  
 
   const filenameStem = (name) => name.replace(/\.[^/.]+$/, "");
 

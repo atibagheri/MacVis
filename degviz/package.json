@@ -3,6 +3,7 @@
   "homepage": "https://atibagheri.github.io/MacVis",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:5050",
   "dependencies": {
     "@mjackson/multipart-parser": "^0.10.1",
     "@testing-library/dom": "^10.4.0",

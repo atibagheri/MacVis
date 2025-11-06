@@ -91,7 +91,6 @@ function(res) {
 }
 
 # ---------- MARKER LIST (for dropdown) ----------
-# ---------- MARKER LIST (for dropdown) ----------
 
 # Marker dictionary used by /marker-list and run_transpca_core
 DEFAULT_MARKERS <- tibble::tibble(
@@ -237,7 +236,8 @@ return(list(
   success = TRUE,
   output_png = result$output_png,
   output_pdf = result$output_pdf,
-  png_base64 = result$png_base64,
+  # png_base64 = result$png_base64,
+  png_base64 = png_base64,
   pdf_base64 = pdf_base64
   ))
 }

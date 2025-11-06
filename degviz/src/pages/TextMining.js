@@ -1,6 +1,6 @@
 import React, { useMemo, useRef, useState } from "react";
 
-const BASE_URL = process.env.REACT_APP_API_BASE || "/api";
+const BASE_URL = process.env.REACT_APP_API_BASE || "";
 
 /* ---------- styles (shared with Circos look) ---------- */
 const S = {

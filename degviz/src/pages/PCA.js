@@ -28,7 +28,7 @@ function PCA() {
       // fd.append('shape', 'Day');
       // fd.append('size', '');
   
-      const res = await axios.post('/api/pca/', fd);  // keep trailing slash
+      const res = await axios.post('/api/pca/', fd); 
       setPlotImg(`data:image/png;base64,${res.data.png}`);
       setPdfLink(`data:application/pdf;base64,${res.data.pdf}`);
     } catch (error) {

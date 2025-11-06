@@ -1,19 +1,35 @@
 {
   "files": {
-    "main.css": "/AppDEG/static/css/main.062dd58d.css",
-    "main.js": "/AppDEG/static/js/main.44e6a0a9.js",
-    "static/media/enrichment.png": "/AppDEG/static/media/enrichment.70c529d62bda2ef7248d.png",
-    "static/media/venn.png": "/AppDEG/static/media/venn.c0e57aeafeb910ee7930.png",
-    "static/media/go.png": "/AppDEG/static/media/go.2e2464b7d84eb9961ec1.png",
-    "static/media/kegg.png": "/AppDEG/static/media/kegg.a7be7bd5b687c4372c2b.png",
-    "static/media/heatmap.png": "/AppDEG/static/media/heatmap.93a97ab3170c619274ee.png",
-    "static/media/pca_plot.png": "/AppDEG/static/media/pca_plot.c109e0ca2b05cc8abebf.png",
-    "index.html": "/AppDEG/index.html",
-    "main.062dd58d.css.map": "/AppDEG/static/css/main.062dd58d.css.map",
-    "main.44e6a0a9.js.map": "/AppDEG/static/js/main.44e6a0a9.js.map"
+    "main.css": "/MacVis/static/css/main.bdc73a7d.css",
+    "main.js": "/MacVis/static/js/main.13ea3214.js",
+    "static/js/239.e17acf74.chunk.js": "/MacVis/static/js/239.e17acf74.chunk.js",
+    "static/js/977.0671ca0b.chunk.js": "/MacVis/static/js/977.0671ca0b.chunk.js",
+    "static/js/732.17aab80c.chunk.js": "/MacVis/static/js/732.17aab80c.chunk.js",
+    "static/media/Circosoverlap.png": "/MacVis/static/media/Circosoverlap.d5ba618ef365289e4a96.png",
+    "static/media/pubmedCloud.png": "/MacVis/static/media/pubmedCloud.c9a2c20baa3ee05dfde7.png",
+    "static/media/keggmap.png": "/MacVis/static/media/keggmap.4f0fba42ba51fd2ed1ba.png",
+    "static/media/venn.png": "/MacVis/static/media/venn.e83fc1aa3caa81eff4a7.png",
+    "static/media/circos.png": "/MacVis/static/media/circos.ce4941fe3c85b297c781.png",
+    "static/media/wordcloud.png": "/MacVis/static/media/wordcloud.9da386c4ea6341651de7.png",
+    "static/media/vennUpset.png": "/MacVis/static/media/vennUpset.ec6a6f9231c3a96629df.png",
+    "static/media/go.png": "/MacVis/static/media/go.cf472bfb4fbc3252f7a1.png",
+    "static/media/gomap.png": "/MacVis/static/media/gomap.57c6bf90ed0ffdca4c2f.png",
+    "static/media/kegg.png": "/MacVis/static/media/kegg.a7be7bd5b687c4372c2b.png",
+    "static/media/pca_plot.png": "/MacVis/static/media/pca_plot.28cb527a57967f69d5d7.png",
+    "static/media/transpca.png": "/MacVis/static/media/transpca.bf8d5c8b2a0e8d2b0352.png",
+    "static/media/Immune.png": "/MacVis/static/media/Immune.9475db1ea5857f52c78d.png",
+    "static/media/heatmapDemo.png": "/MacVis/static/media/heatmapDemo.ba5ad8dba6b271aad008.png",
+    "static/media/pcaplot.png": "/MacVis/static/media/pcaplot.93a4cfdff04122859c48.png",
+    "static/media/heatmap.png": "/MacVis/static/media/heatmap.34c1b33a378a9918bf5d.png",
+    "index.html": "/MacVis/index.html",
+    "main.bdc73a7d.css.map": "/MacVis/static/css/main.bdc73a7d.css.map",
+    "main.13ea3214.js.map": "/MacVis/static/js/main.13ea3214.js.map",
+    "239.e17acf74.chunk.js.map": "/MacVis/static/js/239.e17acf74.chunk.js.map",
+    "977.0671ca0b.chunk.js.map": "/MacVis/static/js/977.0671ca0b.chunk.js.map",
+    "732.17aab80c.chunk.js.map": "/MacVis/static/js/732.17aab80c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.062dd58d.css",
-    "static/js/main.44e6a0a9.js"
+    "static/css/main.bdc73a7d.css",
+    "static/js/main.13ea3214.js"
   ]
 }

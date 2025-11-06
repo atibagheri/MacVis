@@ -86,7 +86,6 @@ export default function TranscriptomePCA() {
         const r = await fetch(`${API_BASE}/marker-list`);
         const j = await r.json().catch(() => null);
         if (!r.ok || !j || j.status !== "ok") throw new Error(j?.message || `HTTP ${r.status}`);
-        console.log("marker-list raw:", j); // <-- add this line
         let opts = [];
         if (Array.isArray(j.markers)) {
           opts = j.markers.filter(m => m && m.value).map(m => ({
@@ -109,46 +108,6 @@ export default function TranscriptomePCA() {
     })();
     return () => { abort = true; };
   }, []);
-
-
-  // Marker list hook
-const [markers, setMarkers] = useState([]);
-const [selectedMarker, setSelectedMarker] = useState("(none)");
-
-useEffect(() => {
-  async function loadMarkers() {
-    try {
-      const r = await fetch(`${API_BASE.replace("/api/transpca","")}/marker-list`);
-      if (!r.ok) throw new Error(`HTTP ${r.status}`);
-      const j = await r.json();
-
-      console.log("marker-list raw:", j);
-
-      // Accept either {markers:[...]} or a bare array
-      const arr = Array.isArray(j) ? j : j?.markers;
-      const opts = (arr || []).map(m => ({
-        value: m.value,
-        label: m.label,
-        class: m.class
-      }));
-
-      if (opts.length === 0) {
-        setMarkers([{ value: "(none)", label: "(none)", class: "" }]);
-        setSelectedMarker("(none)");
-      } else {
-        setMarkers(opts);
-        setSelectedMarker(opts[0].value); // default first marker
-      }
-    } catch (err) {
-      console.error("Failed to load markers:", err);
-      setMarkers([{ value: "(none)", label: "(none)", class: "" }]);
-      setSelectedMarker("(none)");
-    }
-  }
-  loadMarkers();
-}, []);
-
-  
 
   /* ---------- handlers ---------- */
   const onFile = (e) => { setFile(e.target.files?.[0] || null); setError(""); setResp(null); };
@@ -178,6 +137,30 @@ useEffect(() => {
     }
   }
 
+  // Robust downloader for the curated mouse TPM file (works behind proxies)
+  async function downloadMouseTPM() {
+    try {
+      const r = await fetch(`${API_BASE}/mouse-tpm-download`, { method: "GET" });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      const blob = await r.blob();
+      // Extract filename from Content-Disposition if present
+      const cd = r.headers.get("Content-Disposition") || "";
+      const m = cd.match(/filename\*=UTF-8''([^;]+)|filename="?([^"]+)"?/i);
+      const rawName = decodeURIComponent(m?.[1] || m?.[2] || "mouse_tpm.txt");
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = rawName;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      console.error("mouse-tpm-download failed:", e);
+      alert(`Download failed: ${e.message || e}`);
+    }
+  }
+
   async function run() {
     if (!file) { setError("Choose a file (.txt/.tsv/.csv)."); return; }
     setBusy(true); setError(""); setResp(null);
@@ -186,7 +169,7 @@ useEffect(() => {
       fd.append("file", file);
       if (meta) fd.append("meta", meta);
       fd.append("label_col", DEFAULT_LABEL_COL);
-      if (marker) fd.append("marker", marker); // <-- send selected marker
+      if (marker) fd.append("marker", marker); // send selected marker
 
       const r = await fetch(`${API_BASE}/`, { method: "POST", body: fd });
       const text = await r.text();
@@ -243,7 +226,7 @@ useEffect(() => {
                     >
                       {tpmLoading ? "Loading…" : (previewOpen ? "Hide" : "Preview")}
                     </button>
-                    <a href={`${API_BASE}/mouse-tpm-download`} style={S.ghostBtnSmall}>⬇️ Download file</a>
+                    <button onClick={downloadMouseTPM} type="button" style={S.ghostBtnSmall}>⬇️ Download file</button>
                   </div>
                 </div>
 
@@ -283,7 +266,7 @@ useEffect(() => {
                 )}
 
                 <small style={{ color: "#6b7280" }}>
-                  Preview:  <code>Curated in-vitro Macrophage Reference </code>.
+                  Preview:  <code>Curated in-vitro Macrophage Reference</code>.
                 </small>
               </div>
 
@@ -314,7 +297,6 @@ useEffect(() => {
                 <small style={{ color: "#6b7280" }}>
                   Include a sample ID column; best overlap is auto-matched. If a <code>Day</code> column exists, point size reflects it.
                   When multiple metadata columns are available, it automatically detects which metadata columns to use for color, shape, and size in the PCA plot. 
-                 
                 </small>
               </div>
 
