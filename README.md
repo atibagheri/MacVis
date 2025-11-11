@@ -11,7 +11,7 @@ Docker and Docker Compose
 
 Install Docker: https://docs.docker.com/get-docker/
 
-
+---
 ### 1️⃣ Clone the Repository
 First, download the project from GitHub using the command below:
 
