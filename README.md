@@ -13,16 +13,15 @@ git clone https://github.com/atibagheri/MacVis.git
 ---
 
 ### 2️⃣ Check the Files
-You should see files like:
-
+Go to directory
 ```bash
 cd MacVis
+```
+You shuld see
 docker-compose.yml
 backend/
 degviz/
 example_data/
-```
-
 ---
 
 ### 3️⃣ Run the App Locally
