@@ -57,15 +57,19 @@ docker compose down
 
 ---
 
-## 🧠 Citation
+## Citation
 If you use MacVis in your work, please cite:
 
 **Bagheri, A. et al. (2025)** — *MacVis: A Visual Platform for Comparative Transcriptomic Analysis*.
 
 ---
 
-## 🧩 Contact
+##  Contact
 For questions, suggestions, or collaboration inquiries, please contact:  
 **Atefeh Bagheri** — PhD Candidate, App Developer  
+Department of Biological, Geological and Environmental Sciences (BGES)
+Center for Gene Regulation in Health and Disease (GRHD)
+Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
 Email: a.bagheri@vikes.csuohio.edu  
+Website: https://atibagheri.github.io/Website/
 
