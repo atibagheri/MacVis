@@ -29,10 +29,11 @@ ls
 ```
 
 You should see the following files:
-docker-compose.yml
-backend
-degviz
-example_data
+
+- docker-compose.yml
+- backend
+- degviz
+- example_data
 
 ---
 
