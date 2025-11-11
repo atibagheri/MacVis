@@ -78,30 +78,24 @@ Bagheri, A., Prabahar, A., & Jiang, P. (2025). MacVis: A Visual Platform for Com
 
 ## Contact
 
-Contact:
- 
-Atefeh  Bagheri (PhD Candidate; App Developer)
-Center for Gene Regulation in Health and Disease (GRHD)
-Department of Biological, Geological and Environmental Sciences (BGES)
-Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
+Atefeh Bagheri (PhD Candidate; App Developer)  
+Center for Gene Regulation in Health and Disease (GRHD)  
+Department of Biological, Geological and Environmental Sciences (BGES)  
+Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115  
 📧 Email: [a.bagheri@vikes.csuohio.edu](mailto:a.bagheri@vikes.csuohio.edu)  
 🌐 Website: [https://atibagheri.github.io/Website/](https://atibagheri.github.io/Website/)  
 
- 
-Peng Jiang (PI)
-Assistant Professor
-Center for Gene Regulation in Health and Disease (GRHD)
-Center for Applied Data Analysis and Modeling (ADAM)
-Department of Biological, Geological and Environmental Sciences (BGES)
-Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
-Honorary Fellow
-School of Medicine and Public Health (SMPH)
-University of Wisconsin-Madison, 750 Highland Avenue Madison, WI 53705
-Email: p.jiang@csuohio.edu
-📧 Email: [p.jiang@csuohio.edu](p.jiang@csuohio.edu)  
-Lab Website: https://sites.google.com/view/jiang-lab/
-🌐 Website: [https://sites.google.com/view/jiang-lab/](https://sites.google.com/view/jiang-lab/)  
-
+Peng Jiang (PI)  
+Assistant Professor  
+Center for Gene Regulation in Health and Disease (GRHD)  
+Center for Applied Data Analysis and Modeling (ADAM)  
+Department of Biological, Geological and Environmental Sciences (BGES)  
+Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115  
+Honorary Fellow  
+School of Medicine and Public Health (SMPH)  
+University of Wisconsin-Madison, 750 Highland Avenue, Madison, WI 53705  
+📧 Email: [p.jiang@csuohio.edu](mailto:p.jiang@csuohio.edu)  
+🌐 Lab Website: [https://sites.google.com/view/jiang-lab/](https://sites.google.com/view/jiang-lab/)
 
  
 
