@@ -70,6 +70,8 @@ For questions, suggestions, or collaboration inquiries, please contact:
 Department of Biological, Geological and Environmental Sciences (BGES)
 Center for Gene Regulation in Health and Disease (GRHD)
 Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
+Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
+Email: a.bagheri@vikes.csuohio.edu
 Email: a.bagheri@vikes.csuohio.edu  
 Website: https://atibagheri.github.io/Website/
 
