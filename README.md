@@ -9,7 +9,7 @@ Before running MacVis, make sure the following are installed:
 
 Docker and Docker Compose
 
-Install Docker: https://docs.docker.com/get-docker/
+Install Docker: [https://docs.docker.com/get-docker/](https://www.docker.com/get-started/)
 
 ---
 ### 1️⃣ Clone the Repository
@@ -55,7 +55,7 @@ You should see the main web app interface.
 ---
 
 ### 5️⃣ Test with Example Data
-In the folder you received (or inside the repo), you’ll find example data for each module — the filenames match the module names (e.g., PCA, Heatmap, etc.). Upload those files to test the features.
+In the MacVis folder you’ll find example data for each module — the filenames match the module names (e.g., PCA, Heatmap, etc.). Upload those files to test the features.
 
 ---
 
@@ -71,8 +71,7 @@ docker compose down
 ## Citation
 If you use MacVis in your work, please cite:
 
-**Bagheri, A. et al. (2025)** — *MacVis: A Visual Platform for Comparative Transcriptomic Analysis*.
-
+Bagheri, A., Prabahar, A., & Jiang, P. (2025). MacVis: A Visual Platform for Comparative Transcriptomic Analysis.
 ---
 
 ## Contact
