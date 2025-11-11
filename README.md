@@ -75,7 +75,6 @@ If you use MacVis in your work, please cite:
 Bagheri, A., Prabahar, A., & Jiang, P. (2025). MacVis: A Visual Platform for Comparative Transcriptomic Analysis.
 
 ---
-
 ## Contact
 
 Atefeh Bagheri (PhD Candidate; App Developer)  
@@ -96,7 +95,3 @@ School of Medicine and Public Health (SMPH)
 University of Wisconsin-Madison, 750 Highland Avenue, Madison, WI 53705  
 📧 Email: [p.jiang@csuohio.edu](mailto:p.jiang@csuohio.edu)  
 🌐 Lab Website: [https://sites.google.com/view/jiang-lab/](https://sites.google.com/view/jiang-lab/)
-
- 
-
-
