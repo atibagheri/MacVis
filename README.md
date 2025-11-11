@@ -8,7 +8,6 @@ First, download the project from GitHub using the command below:
 
 ```bash
 git clone https://github.com/atibagheri/MacVis.git
-cd MacVis
 ```
 
 ---
@@ -73,4 +72,5 @@ Center for Gene Regulation in Health and Disease (GRHD)
 Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
 Email: a.bagheri@vikes.csuohio.edu  
 Website: https://atibagheri.github.io/Website/
+Email: a.bagheri@vikes.csuohio.edu  
 
