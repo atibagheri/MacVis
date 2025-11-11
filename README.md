@@ -72,7 +72,7 @@ docker compose down
 ## Citation
 If you use MacVis in your work, please cite:
 
-Bagheri, A., Prabahar, A., & Jiang, P. (2025). MacVis: A Visual Platform for Comparative Transcriptomic Analysis.
+Bagheri, A., Prabahar, A., & Jiang, P. (2025). MacVis: a lightweight tool for rapid assessment of macrophage phenotypes from RNA-seq data.
 
 ---
 ## Contact
