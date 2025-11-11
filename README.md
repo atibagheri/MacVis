@@ -17,6 +17,7 @@ cd MacVis
 You should see files like:
 
 ```bash
+cd MacVis
 docker-compose.yml
 backend/
 degviz/
@@ -69,7 +70,6 @@ For questions, suggestions, or collaboration inquiries, please contact:
 **Atefeh Bagheri** — PhD Candidate, App Developer  
 Department of Biological, Geological and Environmental Sciences (BGES)
 Center for Gene Regulation in Health and Disease (GRHD)
-Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
 Cleveland State University, 2121 Euclid Ave, Cleveland, OH 44115
 Email: a.bagheri@vikes.csuohio.edu  
 Website: https://atibagheri.github.io/Website/
