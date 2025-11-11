@@ -3,6 +3,15 @@
 
 ## Instructions to Run the App by Docker
 
+✅ Prerequisites
+
+Before running MacVis, make sure the following are installed:
+
+Docker and Docker Compose
+
+Install Docker: https://docs.docker.com/get-docker/
+
+
 ### 1️⃣ Clone the Repository
 First, download the project from GitHub using the command below:
 
@@ -16,12 +25,15 @@ git clone https://github.com/atibagheri/MacVis.git
 Go to directory
 ```bash
 cd MacVis
+ls
 ```
-You shuld see
+
+You should see the following files:
 docker-compose.yml
 backend/
 degviz/
 example_data/
+
 ---
 
 ### 3️⃣ Run the App Locally
