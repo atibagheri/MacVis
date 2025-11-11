@@ -1,8 +1,7 @@
-# MacVis: a lightweight tool for rapid assessment of macrophage phenotypes from RNA-seq data<img width="468" height="70" alt="image" src="https://github.com/user-attachments/assets/0c908ea9-534c-426f-9f2d-97a4de2814d8" />
-
+# MacVis: a lightweight tool for rapid assessment of macrophage phenotypes from RNA-seq data
 ---
 
-## 🚀 Instructions to Run the App by Docker
+## Instructions to Run the App by Docker
 
 ### 1️⃣ Clone the Repository
 First, download the project from GitHub using the command below:
