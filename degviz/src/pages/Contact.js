@@ -44,26 +44,8 @@ export default function Contact() {
           </p>
         </div>
 
-        {/* Peng Jiang */}
-        <div>
-          <h2 className="text-xl font-semibold mt-4 mb-1">Peng Jiang</h2>
-          <p className="m-0 leading-tight italic">Principal Investigator; Assistant Professor</p>
-          <p className="m-0 leading-tight">Center for Gene Regulation in Health and Disease (GRHD)</p>
-          <p className="m-0 leading-tight">Center for Applied Data Analysis and Modeling (ADAM)</p>
-          <p className="m-0 leading-tight">Department of Biological, Geological and Environmental Sciences (BGES)</p>
-          <p className="m-0 leading-tight">Cleveland State University</p>
-          <p className="m-0 leading-tight">2121 Euclid Ave, Cleveland, OH 44115</p>
-          <p className="m-0 leading-tight">Honorary Fellow</p>
-          <p className="m-0 leading-tight">School of Medicine and Public Health (SMPH)</p>
-          <p className="m-0 leading-tight">University of Wisconsin–Madison</p>
-          <p className="m-0 leading-tight">750 Highland Avenue, Madison, WI 53705</p>
-          <p className="m-0 leading-tight">
-            Email:{' '}
-            <a href="mailto:p.jiang@csuohio.edu" className="text-blue-600 underline">
-              p.jiang@csuohio.edu
-            </a>
-          </p>
-        </div>
+       
+        
       </div>
     </div>
   );
