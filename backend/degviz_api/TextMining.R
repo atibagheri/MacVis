@@ -1,4 +1,3 @@
-# TextMining.R — complete, polished, and matched to your React frontend
 # - Shows TOP N genes (default 20) in plots for readability
 # - CSVs include ALL genes
 # - Summaries include: Gene, PMID, Title, Journal, Year, Score, URL
