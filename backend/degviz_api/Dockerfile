@@ -1,4 +1,3 @@
-# keep your base as-is (on M1, don't force amd64)
 FROM rocker/r-ver:4.5.1
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -16,7 +15,7 @@ RUN set -eux; \
     fonts-dejavu-core curl git unzip; \
   apt-get clean; rm -rf /var/lib/apt/lists/*
 
-# (keep your Bioc/CRAN install RUN steps the same)
+
 
 
 # --- R / Bioconductor pkgs ---
