@@ -134,7 +134,6 @@ writeLines(unmapped, unmapped_path)
   csv_b64      <- encode_file_b64(csv_path)
   unmapped_b64 <- encode_file_b64(unmapped_path)
 
-  # Return and let caller decide to persist anything. We still remove ONLY the temp content when R cleans up the session.
   list(
     n_input_genes = length(gene_symbols),
     n_mapped = nrow(gene_df),
