@@ -22,7 +22,7 @@ app.config.update(
     ),
 )
 
-# --- register blueprints (NO extra indentation) ---
+# --- register blueprints ---
 app.register_blueprint(transpca_blueprint, url_prefix="/api/transpca")
 app.register_blueprint(pca_blueprint, url_prefix="/api/pca")
 app.register_blueprint(venn_upset_blueprint, url_prefix="/api/venn-upset")
